@@ -1,0 +1,57 @@
+:root {
+  --aura-background: #f6f4da;
+  --aura-ink: #171717;
+  --aura-pink: #d72361;
+  --aura-orange: #ff5a0a;
+  --aura-display: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --aura-sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  color: var(--aura-ink);
+  background: var(--aura-background);
+  font-family: var(--aura-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: var(--aura-background);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--aura-background);
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+button,
+a,
+select,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--aura-ink);
+  outline-offset: 3px;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
+}

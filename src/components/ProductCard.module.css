@@ -1,0 +1,128 @@
+.card {
+  min-width: 0;
+}
+
+.imageLink {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 38px;
+  background: #f1b2aa;
+}
+
+.imageLink img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 432 / 542;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.imageLink:hover img {
+  transform: scale(1.015);
+}
+
+.body {
+  padding: 18px 4px 0;
+}
+
+.name {
+  display: inline-block;
+  color: #171717;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 850;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.metaRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 8px 12px;
+  min-height: 68px;
+  margin-top: 8px;
+}
+
+.collection,
+.price {
+  margin: 0;
+  font-size: 0.86rem;
+}
+
+.collection {
+  margin-bottom: 8px;
+}
+
+.price {
+  align-self: start;
+  padding-top: 1px;
+  white-space: nowrap;
+}
+
+.swatches {
+  display: flex;
+  gap: 7px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(23 23 23 / 16%);
+  border-radius: 50%;
+}
+
+.tryButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 132px;
+  min-height: 54px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #fbfae8;
+  color: #171717;
+  box-shadow: 0 16px 34px rgb(34 29 16 / 12%);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.tryButton:hover {
+  background: #d72361;
+  color: white;
+}
+
+.imageLink:focus-visible,
+.name:focus-visible,
+.tryButton:focus-visible {
+  outline: 3px solid #171717;
+  outline-offset: 4px;
+}
+
+@media (max-width: 720px) {
+  .imageLink {
+    border-radius: 24px;
+  }
+
+  .body {
+    padding-top: 12px;
+  }
+
+  .metaRow {
+    display: block;
+  }
+
+  .price {
+    margin-top: 8px;
+  }
+
+  .tryButton {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+  }
+}
